@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h1><i class="fab fa-spotify"></i> MySpotify</h1>
+    <ul>
+      <li><i class="fas fa-home"></i> Home</li>
+      <li><i class="fas fa-search"></i> Search</li>
+      <li><i class="fas fa-music"></i> Library</li>
+      <li><i class="fas fa-heart"></i> Liked Songs</li>
+      <li><i class="fas fa-plus"></i> Create Playlist</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search for songs, artists, or albums...">
+    </div>
+    <h2>Recently Played</h2>
+    <div class="song-list" id="songList">
+      <div class="song" data-src="song1.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Blinding Lights</div>
+        <div class="song-artist">The Weeknd</div>
+      </div>
+      <div class="song" data-src="song2.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Save Your Tears</div>
+        <div class="song-artist">The Weeknd</div>
+      </div>
+      <div class="song" data-src="song3.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Stay</div>
+        <div class="song-artist">The Kid LAROI, Justin Bieber</div>
+      </div>
+      <div class="song" data-src="song4.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Levitating</div>
+        <div class="song-artist">Dua Lipa</div>
+      </div>
+      <div class="song" data-src="song5.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Good 4 U</div>
+        <div class="song-artist">Olivia Rodrigo</div>
+      </div>
+      <div class="song" data-src="song6.mp3">
+        <div class="song-cover">🎵</div>
+        <div class="song-title">Montero</div>
+        <div class="song-artist">Lil Nas X</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Player -->
+  <div class="player">
+    <div class="song-info">
+      <div class="song-info-cover">🎵</div>
+      <div class="song-info-text">
+        <div class="song-info-title" id="currentSongTitle">No song playing</div>
+        <div class="song-info-artist" id="currentSongArtist">-</div>
+      </div>
+    </div>
+    
+    <div class="player-controls">
+      <button class="player-btn" id="prevBtn"><i class="fas fa-step-backward"></i></button>
+      <button class="player-btn play-btn" id="playBtn"><i class="fas fa-play"></i></button>
+      <button class="player-btn" id="nextBtn"><i class="fas fa-step-forward"></i></button>
+    </div>
+    
+    <div class="progress-container">
+      <span class="time" id="currentTime">0:00</span>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+      <span class="time" id="duration">0:30</span>
+    </div>
+    
+    <div class="volume-control">
+      <i class="fas fa-volume-up volume-icon"></i>
+      <div class="volume-bar">
+        <div class="volume-progress" id="volumeProgress"></div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audioPlayer"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
